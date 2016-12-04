@@ -39,7 +39,7 @@ namespace Publisher
             // Send/Receive
             Configure
                 .With(_activator)
-                .Logging(l => l.ColoredConsole(minLevel: LogLevel.Debug))
+                .Logging(l => l.ColoredConsole(minLevel: LogLevel.Warn))
                 //.Serialization(s => s.UseNewtonsoftJson())
                 .Transport(t => t.UseSqlServerAsOneWayClient(@"Server=.\sql;Database=queuet;Trusted_Connection=True;", "messages"))
                 //.Transport(t => t.UseFileSystem(@"C:\bus", "publisher"))

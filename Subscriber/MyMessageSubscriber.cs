@@ -46,7 +46,7 @@ namespace Subscriber
             });
             Configure
                 .With(_activator)
-                .Logging(l => l.ColoredConsole(minLevel: LogLevel.Debug))
+                .Logging(l => l.ColoredConsole(minLevel: LogLevel.Warn))
                 //.Serialization(s => s.UseNewtonsoftJson())
                 //.Transport(t => t.UseFileSystem(@"C:\bus", "subscriber1"))
                 .Transport(t => t.UseSqlServer(@"Server=.\sql;Database=queuet;Trusted_Connection=True;", "messages", "subscriber1"))
